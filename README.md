@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/vasilije15/howzit">
+  <a href="https://github.com/vasilije15/drongo">
     <img src="App/src/main/res/drawable/logic_logo_512.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -16,9 +16,9 @@
     <br />
     <a href="https://www.youtube.com/watch?v=zJuR0xxzUcU">View Demo</a>
     ·
-    <a href="https://github.com/vasilije15/howzit/issues">Report Bug</a>
+    <a href="https://github.com/vasilije15/drongo/issues">Report Bug</a>
     ·
-    <a href="https://github.com/vasilije15/howzit/issues">Request Feature</a>
+    <a href="https://github.com/vasilije15/drongo/issues">Request Feature</a>
   </p>
 </p>
 
@@ -68,7 +68,7 @@ We combined the stories behind the name and came up with the logo - a bird with 
 This application was built as a part of Distributed Software Development course by seven students from two universities. 
 
 <p align="center">
-  <a href="https://github.com/vasilije15/howzit/tree/master/screenshots">
+  <a href="https://github.com/vasilije15/drongo/tree/master/screenshots">
       <img src="screenshots/combined.png" alt="App Screenshots">
   </a>
  
@@ -91,7 +91,7 @@ This application runs on devices running Android 7.0 (Nougat) or higher (API Lev
 Clone with this command and import the project manually into Android Studio
 
   ```sh
-  git clone https://github.com/vasilije15/howzit
+  git clone https://github.com/vasilije15/drongo
   ```
 or use Android Studio's built in tool to 'Get from Source Control' by providing repository's link.
 After you have imported the project to Android Studio, wait until Gradle is done building and run the application on an actual device.
