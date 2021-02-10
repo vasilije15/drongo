@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topbar_chat"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textview_contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/contact_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chatActivityAvatar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/chatActivityAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/chatActivityBackButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@mipmap/abuki" />
+
+        <ImageView
+            android:id="@+id/chatActivityBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.stfalcon.chatkit.messages.MessagesList
+        android:id="@+id/messagesListChatKit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:incomingDefaultBubbleColor="@color/blue"
+        app:incomingTextColor="@color/white"
+        app:incomingTextLinkColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/messageInputChatKit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topbar_chat"
+        app:outcomingDefaultBubbleColor="@color/yellow"
+        app:outcomingTextColor="@color/white"
+        app:outcomingTextLinkColor="@color/white"
+        app:incomingDefaultBubblePressedColor="@color/fergrey"
+        app:outcomingDefaultBubblePressedColor="@color/fergrey"
+        app:textAutoLink="all" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/light_gray"
+        app:layout_constraintBottom_toTopOf="@id/messageInputChatKit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.stfalcon.chatkit.messages.MessageInput
+        android:id="@+id/messageInputChatKit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:inputButtonDefaultBgColor="@color/blue"
+        app:inputHint="@string/type_a_message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

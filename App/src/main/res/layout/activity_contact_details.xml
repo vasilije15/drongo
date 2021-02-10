@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_secondary"
+    android:fitsSystemWindows="true">
+
+
+    <View
+        android:id="@+id/contact_details_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_border_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintWidth_percent="0.95" />
+
+    <!--    Remove this line from View component to center the container vertically-->
+    <!--    app:layout_constraintVertical_bias="0.3"-->
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/contact_picture_contact_details"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:civ_border_color="@color/blue"
+        app:civ_border_width="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/contact_details_container"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="@+id/contact_details_container"
+        app:layout_constraintTop_toTopOf="@+id/contact_details_container"
+        app:layout_constraintWidth_percent="0.4"
+        tools:src="@drawable/avatar" />
+
+    <EditText
+        android:id="@+id/contact_details_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_border_input"
+        android:ems="10"
+        android:enabled="false"
+        android:importantForAutofill="no"
+        android:inputType="textCapSentences"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact_picture_contact_details"
+        app:layout_constraintWidth_percent="0.6"
+        tools:hint="@string/username" />
+
+    <EditText
+        android:id="@+id/contact_details_given_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_border_input"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textCapSentences"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact_details_username"
+        app:layout_constraintWidth_percent="0.6"
+        tools:hint="@string/username" />
+
+    <ImageView
+        android:id="@+id/button_update_contact_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:src="@drawable/forward_arrow"
+        android:text="@string/create_account"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/contact_details_given_username"
+        app:layout_constraintTop_toTopOf="@+id/contact_details_given_username" />
+
+    <ImageView
+        android:id="@+id/back_button_contact_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:backgroundTint="@color/blue"
+        android:src="@drawable/back_button_blue"
+        android:text="@string/create_account"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/contact_details_container"
+        app:layout_constraintTop_toTopOf="@+id/contact_picture_contact_details" />
+
+    <ImageView
+        android:id="@+id/deleteContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/blue"
+        android:src="@drawable/delete"
+        android:text="@string/create_account"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/contact_details_container"
+        app:layout_constraintTop_toTopOf="@+id/contact_picture_contact_details" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

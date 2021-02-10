@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/registerFragment">
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="dsd.mdhfer.drongo.ui.fragments.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/register_username">
+        <action
+            android:id="@+id/action_registerFragment_to_avatarFragment"
+            app:destination="@id/avatarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="dsd.mdhfer.drongo.ui.fragments.PasswordFragment"
+        android:label="PasswordFragment"
+        tools:layout="@layout/create_password">
+        <action
+            android:id="@+id/action_passwordFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="avatar"
+            android:defaultValue="luki"
+            app:argType="string" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="dsd.mdhfer.drongo.ui.activities.HomeActivity"
+        android:label="homeActivity"
+        tools:layout="@layout/activity_home" />
+    <fragment
+        android:id="@+id/avatarFragment"
+        android:name="dsd.mdhfer.drongo.ui.fragments.AvatarFragment"
+        android:label="AvatarFragment"
+        tools:layout="@layout/fragment_avatars">
+        <action
+            android:id="@+id/action_avatarFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+</navigation>

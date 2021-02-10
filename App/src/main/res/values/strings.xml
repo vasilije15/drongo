@@ -1,0 +1,37 @@
+<resources>
+    <!--    Please add everything text related in this file -->
+    <string name="app_name">Drongo</string>
+    <string name="username">username</string>
+    <string name="choose_username">Choose your username...</string>
+    <string name="confirm_password">Confirm your password</string>
+    <string name="choose_password">Choose your password</string>
+    <string name="create_account">Create account</string>
+    <string name="contacts">Contacts</string>
+    <string name="drongo">Drongo</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="type_a_message">Type a message...</string>
+    <string name="slogan">Howzit</string>
+    <string name="slogann"> goin?</string>
+    <string name="fab">FAB</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="login">Login</string>
+    <string name="message">Message</string>
+    <string name="no_contacts_message">Tap + icon to add a contact</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="requirement_1">Establish a connection with another Drongo user in person</string>
+    <string name="requirement_2">Maintain a list of users</string>
+    <string name="requirement_3">Send and receive encrypted messages</string>
+    <string name="drongo_makes_possible">Drongo makes it possible to</string>
+    <string name="choose_your_avatar">choose your avatar</string>
+    <string name="choose">Choose</string>
+    <string name="delete_account">Delete account</string>
+    <string name="logout">Logout</string>
+    <string name="forgotten_password">Forgotten your password?</string>
+    <string name="show_qr_code">Show QR code</string>
+    <string name="move_camera">Please move camera over another device\'s screen</string>
+    <string name="slogan_password">Longer is stronger</string>
+    <string name="show_notifications">Turn off notifications for incoming messages</string>
+    <string name="show_notifications_unknown_contacts">Show notification when a message from unknown contact has been received</string>
+
+</resources>

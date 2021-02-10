@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/menuContacts">
+    <fragment
+        android:id="@+id/menuContacts"
+        android:name="dsd.mdhfer.drongo.ui.fragments.ContactsFragment"
+        android:label="Contacts"
+        tools:layout="@layout/fragment_contacts">
+        <action
+            android:id="@+id/action_menuContacts_to_userQRFragment"
+            app:destination="@id/userQRFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuSettings"
+        android:name="dsd.mdhfer.drongo.ui.fragments.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings"/>
+    <fragment
+        android:id="@+id/menuAboutApp"
+        android:name="dsd.mdhfer.drongo.ui.fragments.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about"/>
+    <fragment
+        android:id="@+id/userQRFragment"
+        android:name="dsd.mdhfer.drongo.ui.fragments.UserQRFragment"
+        android:label="UserQRFragment"
+        tools:layout="@layout/qr_user"/>
+    <fragment
+        android:id="@+id/updateUserInfoFragment"
+        android:name="dsd.mdhfer.drongo.ui.fragments.UpdateUserInfoFragment"
+        android:label="Your Info"
+        tools:layout="@layout/update_user_info"/>
+</navigation>

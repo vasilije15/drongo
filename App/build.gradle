@@ -1,0 +1,123 @@
+apply plugin: 'com.android.application'
+apply plugin: "androidx.navigation.safeargs"
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "dsd.mdhfer.drongo"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+        unitTests.includeAndroidResources = true
+    }
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'armeabi-v7a'
+            universalApk true
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    /** Added libraries */
+    implementation 'me.dm7.barcodescanner:zxing:1.9.13' /**< QR code scanner library */
+
+
+    implementation 'com.github.GrenderG:Toasty:1.5.0'
+
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.1'
+    implementation 'androidx.navigation:navigation-ui:2.3.1'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.android.material:material:1.2.1'
+
+    // mockito
+    testImplementation 'org.mockito:mockito-core:3.1.0'
+
+
+    // navigation
+    def nav_version = "2.3.1"
+
+    //Java
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+
+    // Feature module Support
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+
+    // Testing Navigation
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    // Jetpack Compose Integration
+    implementation "androidx.navigation:navigation-compose:1.0.0-alpha02"
+
+    // Dependency for Zxing - added by Vaske
+    implementation 'com.journeyapps:zxing-android-embedded:4.1.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+
+    // Awesome QR - Library to generate custom QR codes
+    implementation 'com.github.SumiMakito:AwesomeQRCode:1.2.0'
+
+    // Room
+    def room_version = "2.2.5"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+
+    // Circle Image View for profile picture
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // Library to load and take pictures
+    implementation 'com.github.esafirm.android-image-picker:imagepicker:2.4.1'
+
+    // DiscreteScrollView - Carousel to choose avatars
+    implementation 'com.yarolegovich:discrete-scrollview:1.5.1'
+
+    // Chat view
+    implementation 'com.github.bassaer:chatmessageview:2.0.1'
+
+    // ChatKit - library for Chat View
+    implementation 'com.github.stfalcon:chatkit:0.3.3'
+
+    implementation "net.zetetic:android-database-sqlcipher:4.4.2"
+    implementation "androidx.sqlite:sqlite:2.0.1"
+
+    implementation "androidx.security:security-crypto:1.1.0-alpha03"
+
+    // Sweet alerts
+    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+
+
+}
