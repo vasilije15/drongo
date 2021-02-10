@@ -100,7 +100,7 @@ After you have imported the project to Android Studio, wait until Gradle is done
 
 
 #### Download and install APK
-Download the APK file to your device from [here](https://github.com/vasilije15/howzit/releases/download/v1.0/Drongo.apk) and install the downloaded APK file. 
+Download the APK file to your device from [here](https://github.com/vasilije15/drongo/releases/download/v1.0/Drongo.apk) and install the downloaded APK file. 
 You might need to allow installation from unknown sources first and when 'Blocked by Play Protect' window pops up just press 'Install Anyway'.
 
 
